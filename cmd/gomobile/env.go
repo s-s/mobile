@@ -138,6 +138,7 @@ func envInit() (err error) {
 			panic(fmt.Errorf("unknown GOARCH: %q", arch))
 		}
 		cflags += " -fembed-bitcode"
+		cflags += " -Wno-nullability-completeness"
 		if err != nil {
 			return err
 		}
